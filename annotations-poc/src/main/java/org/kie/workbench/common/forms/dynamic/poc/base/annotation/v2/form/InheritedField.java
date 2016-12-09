@@ -22,7 +22,7 @@ import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout
 
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( {} )
-public @interface InhertiedField {
+public @interface InheritedField {
 
     String name();
 

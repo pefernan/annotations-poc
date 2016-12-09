@@ -37,7 +37,7 @@ public @interface Field {
 
     FieldParam[] settings() default {};
 
-    InhertiedField[] beforeMe() default {};
+    InheritedField[] beforeMe() default {};
 
-    InhertiedField[] afterMe() default {};
+    InheritedField[] afterMe() default {};
 }
