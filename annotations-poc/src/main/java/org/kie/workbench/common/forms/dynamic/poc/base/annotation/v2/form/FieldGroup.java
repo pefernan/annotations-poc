@@ -19,6 +19,4 @@ public @interface FieldGroup {
     LayoutSettings settings() default @LayoutSettings;
 
     String labelKey() default "";
-
-    String startElement() default "";
 }
