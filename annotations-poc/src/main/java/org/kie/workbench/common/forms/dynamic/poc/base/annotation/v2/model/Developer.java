@@ -6,7 +6,7 @@ import java.util.List;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroup;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroupType;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormDefinition;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.Field;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.i18n.I18nSettings;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Column;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
@@ -27,15 +27,15 @@ public class Developer extends HumanBeing {
             name = "techincalTab",
             type = FieldGroupType.TAB,
             labelKey = "techincalTab.label" )
-    @FormField( labelKey = "languages.label" )
+    @Field( labelKey = "languages.label" )
     private String languages;
 
     @LayoutSettings( afterElement = "languages" )
-    @FormField( labelKey = "techscore.label" )
+    @Field( labelKey = "techscore.label" )
     private Integer techScore;
 
     @LayoutSettings( afterElement = "techScore" )
-    @FormField( labelKey = "developerFriends.label" )
+    @Field( labelKey = "developerFriends.label" )
     private List<Pet> friends = new ArrayList<Pet>();
 
     public List<Pet> getFriends() {

@@ -25,7 +25,7 @@ import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.proper
 @Inherited
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( { ElementType.FIELD } )
-public @interface FormField {
+public @interface Field {
 
     Class<? extends org.kie.workbench.common.forms.model.FieldDefinition> type() default DefaultFieldDefinition.class;
 

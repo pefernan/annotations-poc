@@ -7,7 +7,7 @@ import org.jboss.errai.databinding.client.api.Bindable;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroup;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroupType;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormDefinition;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.Field;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Column;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutSettings;
@@ -37,7 +37,7 @@ public class HumanBeing {
             name = "personalData",
             type = FieldGroupType.TAB,
             labelKey = "layout.personalData" )
-    @FormField( labelKey = "address.label" )
+    @Field( labelKey = "address.label" )
     private Address address;
 
     @LayoutSettings( afterElement = "address" )
