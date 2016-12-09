@@ -17,7 +17,7 @@
 package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout;
 
 public enum ColSpan {
-    DEFAULT( 0 ),
+    AUTO( 0 ),
     SPAN_1( 1 ),
     SPAN_2( 2 ),
     SPAN_3( 3 ),

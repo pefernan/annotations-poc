@@ -21,5 +21,5 @@ import java.lang.annotation.RetentionPolicy;
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 public @interface Column {
 
-    ColSpan value() default ColSpan.DEFAULT;
+    ColSpan value() default ColSpan.AUTO;
 }
