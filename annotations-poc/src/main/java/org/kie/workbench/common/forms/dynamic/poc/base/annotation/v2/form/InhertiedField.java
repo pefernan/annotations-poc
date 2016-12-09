@@ -16,13 +16,12 @@
 
 package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.RetentionPolicy;
 
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutSettings;
 
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
-@java.lang.annotation.Target( { ElementType.FIELD } )
+@java.lang.annotation.Target( {} )
 public @interface InhertiedField {
 
     String name();
