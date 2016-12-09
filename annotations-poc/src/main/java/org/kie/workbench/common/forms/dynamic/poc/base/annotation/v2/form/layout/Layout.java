@@ -16,20 +16,10 @@
 
 package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.RetentionPolicy;
 
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
-@java.lang.annotation.Target( { ElementType.TYPE, ElementType.FIELD } )
+@java.lang.annotation.Target( {} )
 public @interface Layout {
-
-    String name() default "";
-
-    Column[] layout() default @Column;
-
-    LayoutType type() default LayoutType.DEFAULT;
-
-    String labelKey() default "";
-
-    String startElement() default "";
+    Column[] value() default @Column;
 }

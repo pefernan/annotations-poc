@@ -6,16 +6,14 @@ import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormDe
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.ColSpan;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Column;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties.FormField;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties.SkipFormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.SkipFormField;
 
 @Portable
 @Bindable
 @FormDefinition(
-        layout = @Layout(
-                layout = { @Column( ColSpan.SPAN_4 ), @Column },
-                startElement = "name"
-        )
+        layout = @Layout( { @Column( ColSpan.SPAN_4 ), @Column } ),
+        startElement = "name"
 )
 public class Pet {
 

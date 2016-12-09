@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties;
+package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.RetentionPolicy;
+import org.jboss.errai.common.client.api.annotations.Portable;
 
-@Inherited
-@java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
-@java.lang.annotation.Target( { ElementType.FIELD } )
-public @interface SkipFormField {
-
+@Portable
+public enum FieldGroupType {
+    DEFAULT,
+    FIELDSET,
+    PANEL,
+    TAB,
+    ACCORDION
 }

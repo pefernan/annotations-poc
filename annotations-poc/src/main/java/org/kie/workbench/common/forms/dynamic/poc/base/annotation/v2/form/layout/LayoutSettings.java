@@ -21,7 +21,7 @@ import java.lang.annotation.RetentionPolicy;
 
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( { ElementType.FIELD } )
-public @interface LayoutElementSettings {
+public @interface LayoutSettings {
 
     String afterElement() default "";
 
@@ -30,8 +30,4 @@ public @interface LayoutElementSettings {
     int horizontalSpan() default 0;
 
     int verticalSpan() default 0;
-
-    OtherLayoutElementSettings[] after() default { @OtherLayoutElementSettings };
-
-    OtherLayoutElementSettings[] before() default { @OtherLayoutElementSettings };
 }

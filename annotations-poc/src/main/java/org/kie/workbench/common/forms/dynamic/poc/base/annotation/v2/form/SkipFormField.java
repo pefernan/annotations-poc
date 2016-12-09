@@ -14,20 +14,15 @@
  * limitations under the License.
  */
 
-package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout;
+package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.RetentionPolicy;
 
+@Inherited
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( { ElementType.FIELD } )
-public @interface OtherLayoutElementSettings {
+public @interface SkipFormField {
 
-    String after() default "";
-
-    boolean newLine() default false;
-
-    int horizontalSpan() default 0;
-
-    int verticalSpan() default 0;
 }

@@ -17,24 +17,28 @@
 package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.RetentionPolicy;
 
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.i18n.I18nSettings;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.DefaultFieldDefinition;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties.FieldParam;
 
+@Inherited
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
-@java.lang.annotation.Target( { ElementType.TYPE } )
-public @interface FormDefinition {
+@java.lang.annotation.Target( { ElementType.FIELD } )
+public @interface FormField {
 
-    LabelPosition labelPosition() default LabelPosition.DEFAULT;
+    Class<? extends org.kie.workbench.common.forms.model.FieldDefinition> type() default DefaultFieldDefinition.class;
 
-    boolean allowInheritance() default true;
+    String labelKey() default "";
 
-    FieldPolicy policy() default FieldPolicy.ALL;
+    boolean required() default false;
 
-    I18nSettings i18n() default @I18nSettings;
+    boolean readonly() default false;
 
-    Layout layout() default @Layout;
+    FieldParam[] settings() default {};
 
-    String startElement() default "";
+    InhertiedField[] beforeMe() default {};
+
+    InhertiedField[] afterMe() default {};
 }

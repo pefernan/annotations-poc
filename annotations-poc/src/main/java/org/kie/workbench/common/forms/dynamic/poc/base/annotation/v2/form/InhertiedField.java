@@ -14,26 +14,20 @@
  * limitations under the License.
  */
 
-package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties;
+package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form;
 
 import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
 import java.lang.annotation.RetentionPolicy;
 
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.DefaultFieldDefinition;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutSettings;
 
-@Inherited
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( { ElementType.FIELD } )
-public @interface FormField {
+public @interface InhertiedField {
 
-    Class<? extends org.kie.workbench.common.forms.model.FieldDefinition> type() default DefaultFieldDefinition.class;
+    String name();
 
-    String labelKey() default "";
+    boolean overrideLayoutSettings() default false;
 
-    boolean required() default false;
-
-    boolean readonly() default false;
-
-    FieldParam[] settings() default {};
+    LayoutSettings settings() default @LayoutSettings;
 }

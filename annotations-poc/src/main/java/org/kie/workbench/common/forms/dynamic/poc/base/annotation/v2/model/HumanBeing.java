@@ -4,41 +4,43 @@ import java.util.Date;
 
 import org.jboss.errai.common.client.api.annotations.Portable;
 import org.jboss.errai.databinding.client.api.Bindable;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroup;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FieldGroupType;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormDefinition;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Column;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutElementSettings;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutType;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties.FormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.LayoutSettings;
 
 @Portable
 @Bindable
-@FormDefinition (
-        layout = @Layout(
-                layout = {@Column, @Column, @Column},
-                startElement = "id"
-        )
+@FormDefinition(
+        startElement = "id",
+        layout = @Layout( { @Column, @Column, @Column } )
 )
 public class HumanBeing {
 
-    @LayoutElementSettings ( horizontalSpan = 3 )
+    @LayoutSettings( horizontalSpan = 3 )
     private String id;
 
-    @LayoutElementSettings( afterElement = "id" )
+    @LayoutSettings( afterElement = "id" )
     private String name;
 
-    @LayoutElementSettings( afterElement = "name" )
+    @LayoutSettings( afterElement = "name" )
     private String lastName;
 
-    @LayoutElementSettings( afterElement = "lastName" )
+    @LayoutSettings( afterElement = "lastName" )
     private Date birthDay;
 
-    @LayoutElementSettings( afterElement = "birthDay", horizontalSpan = 3 )
-    @Layout( name = "personalData", type = LayoutType.TAB, labelKey = "layout.personalData" )
+    @LayoutSettings( afterElement = "birthDay", horizontalSpan = 3 )
+    @FieldGroup(
+            name = "personalData",
+            type = FieldGroupType.TAB,
+            labelKey = "layout.personalData" )
     @FormField( labelKey = "address.label" )
     private Address address;
 
-    @LayoutElementSettings( afterElement = "address")
+    @LayoutSettings( afterElement = "address" )
     private Pet pet;
 
     public HumanBeing() {
