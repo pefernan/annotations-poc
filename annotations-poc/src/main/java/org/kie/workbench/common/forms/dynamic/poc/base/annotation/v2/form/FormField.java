@@ -20,7 +20,6 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.RetentionPolicy;
 
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.DefaultFieldDefinition;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.properties.FieldParam;
 
 @Inherited

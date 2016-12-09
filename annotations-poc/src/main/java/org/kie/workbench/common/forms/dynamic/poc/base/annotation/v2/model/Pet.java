@@ -3,11 +3,11 @@ package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.model;
 import org.jboss.errai.common.client.api.annotations.Portable;
 import org.jboss.errai.databinding.client.api.Bindable;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormDefinition;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
+import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.SkipFormField;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.ColSpan;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Column;
 import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout.Layout;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.FormField;
-import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.SkipFormField;
 
 @Portable
 @Bindable

@@ -16,11 +16,10 @@
 
 package org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.i18n;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.RetentionPolicy;
 
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
-@java.lang.annotation.Target( { ElementType.TYPE } )
+@java.lang.annotation.Target( {} )
 public @interface I18nSettings {
 
     String bundle() default "";

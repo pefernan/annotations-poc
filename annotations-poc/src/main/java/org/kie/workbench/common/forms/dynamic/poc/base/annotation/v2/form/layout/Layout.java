@@ -21,5 +21,6 @@ import java.lang.annotation.RetentionPolicy;
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( {} )
 public @interface Layout {
+
     Column[] value() default @Column;
 }

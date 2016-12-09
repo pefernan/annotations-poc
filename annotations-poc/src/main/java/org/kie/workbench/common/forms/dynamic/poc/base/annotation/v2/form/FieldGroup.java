@@ -9,6 +9,7 @@ import org.kie.workbench.common.forms.dynamic.poc.base.annotation.v2.form.layout
 @java.lang.annotation.Retention( RetentionPolicy.RUNTIME )
 @java.lang.annotation.Target( { ElementType.FIELD } )
 public @interface FieldGroup {
+
     String name();
 
     FieldGroupType type() default FieldGroupType.DEFAULT;
