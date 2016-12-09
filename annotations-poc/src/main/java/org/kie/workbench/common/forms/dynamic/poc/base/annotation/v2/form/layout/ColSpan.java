@@ -40,4 +40,9 @@ public enum ColSpan {
     public int getSpan() {
         return span;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf( span );
+    }
 }
